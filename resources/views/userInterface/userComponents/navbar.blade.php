@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg">
     <div class="container">
         <a class="navbar-brand me-lg-5 me-0" href="user/assets/index.html">
-            <img src="user/assets/images/pod-talk-logo.png" class="logo-image img-fluid" alt="templatemo pod talk">
+            <img src="user/assets/images/pod-talk-logo.png" class="logo-image img-fluid" >
         </a>
 
         <form onsubmit="return handleSearch(event)" class="custom-form search-form flex-fill me-3" role="search">
@@ -43,6 +43,13 @@
                                     <i class="bi bi-bag me-2"></i>My Orders
                                 </a>
                             </li>
+                            @if(Auth::user()->role == 1)
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('dashboard') }}">
+                                        <i class="bi bi-speedometer2 me-2"></i>Dashboard
+                                    </a>
+                                </li>
+                            @endif
                             <li><hr class="dropdown-divider"></li>
                             <li>
                                 <form method="POST" action="{{ route('logout') }}">

@@ -19,33 +19,33 @@
                             <th>Product</th>
                             <th>Price</th>
                             <th>Status</th>
-                            
+                            <th>User Email</th> <!-- New column for email -->
                         </tr>
                     </thead>
                     <tbody>
                         @forelse($orders as $order)
-                            <tr>
-                                <td>#{{ $order->id }}</td>
-                                <td>
-                                    <div class="d-flex align-items-center">
-                                        {{-- <img src="{{ asset('storage/' . $order->products->image) }}" 
-                                             alt="{{ $order->product->title }}" 
-                                             class="rounded me-2" 
-                                             style="width: 50px; height: 50px; object-fit: cover;"> --}}
-                                        {{ $order->product->title }}
-                                    </div>
-                                </td>
-                                <td>{{ number_format($order->product->price, 2) }} FCFA</td>
-                                <td>
-                                    <span class="badge bg-{{ 
-                                        $order->status === 'pending' ? 'warning' : 
-                                        ($order->status === 'approved' ? 'success' : 
-                                        ($order->status === 'cancelled' ? 'danger' : 'secondary')) 
-                                    }}">
-                                        {{ ucfirst($order->status) }}
-                                    </span>
-                                </td>
-                            </tr>
+                                            <tr>
+                                                <td>#{{ $order->id }}</td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        {{-- <img src="{{ asset('storage/' . $order->products->image) }}"
+                                                            alt="{{ $order->product->title }}" class="rounded me-2"
+                                                            style="width: 50px; height: 50px; object-fit: cover;"> --}}
+                                                        {{ $order->product->title }}
+                                                    </div>
+                                                </td>
+                                                <td>{{ number_format($order->product->price, 2) }} FCFA</td>
+                                                <td>
+                                                    <span class="badge bg-{{ 
+                                                            $order->status === 'pending' ? 'warning' :
+                            ($order->status === 'approved' ? 'success' :
+                                ($order->status === 'cancelled' ? 'danger' : 'secondary')) 
+                                                        }}">
+                                                        {{ ucfirst($order->status) }}
+                                                    </span>
+                                                </td>
+                                                <td>{{ $order->user->email }}</td> <!-- Display user email -->
+                                            </tr>
                         @empty
                             <tr>
                                 <td colspan="5" class="text-center py-4">
