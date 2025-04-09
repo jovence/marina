@@ -5,6 +5,7 @@
                 <th>id</th>
                 <th>Name</th>
                 <th>Email</th>
+                <th>phone number</th>
                 <th>Joined Date</th>
             </tr>
         </thead>
@@ -14,6 +15,7 @@
                     <td>{{ $customer->id }}</td>
                     <td>{{ $customer->name }}</td>
                     <td>{{ $customer->email }}</td>
+                    <td>{{ $customer->phone }}</td>
                     <td>{{ $customer->created_at->format('d M Y') }}</td>
                 </tr>
             @endforeach

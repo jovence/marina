@@ -15,7 +15,7 @@ class Dashboardindex extends Component
     public $totalCategories;
     public $ordersByStatus;
     public $numberOfUsers;
-
+    public $totalCustomers; // Add this property
 
     public function mount()
     {
@@ -28,12 +28,15 @@ class Dashboardindex extends Component
         $this->totalProducts = Product::count();
         $this->totalCategories = Category::count();
         $this->numberOfUsers = User::count();
+        $this->totalCustomers = User::where('role', 0)->count(); // Add this line
     }
+
     public function render()
     {
         $users = User::all();
-        return view('livewire.dashboard-index',compact('users'))->layout('dashboard');
+        return view('livewire.dashboard-index', [
+            'users' => $users,
+        ])->layout('dashboard');
     }
-    
 }
 

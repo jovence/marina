@@ -4,6 +4,7 @@
 <head>
     @include('adminComponents.css')
     @livewireStyles
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body class="with-welcome-text">
@@ -46,6 +47,7 @@
     </div>
     @livewireScripts
     @include('adminComponents.js')
+    @stack('scripts')
 </body>
     
 </html>
