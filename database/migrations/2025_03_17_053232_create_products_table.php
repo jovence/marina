@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();   
             $table->string('title');
             $table->string('description');
-            $table->string('category_di')->nullable()->constrained('categories')->onDelete('set null');
+            $table->string('category_id')->nullable()->constrained('categories')->onDelete('set null');
             $table->string('price');
             $table->string('image');
             $table->string('status')->nullable();

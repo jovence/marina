@@ -9,8 +9,7 @@
         <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.categories') }}">
                 <i class="mdi mdi-shape-outline menu-icon"></i>
-
-                <span class="menu-title">Cathegory</span>
+                <span class="menu-title">Category</span>
             </a>
         </li>
         <li class="nav-item">
@@ -25,6 +24,11 @@
                 <span class="menu-title">Orders</span>
             </a>
         </li>
-
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('admin.customers') }}">
+                <i class="mdi mdi-account-group menu-icon"></i>
+                <span class="menu-title">Customers</span>
+            </a>
+        </li>
     </ul>
 </nav>

@@ -11,6 +11,7 @@ use App\Livewire\Dashboardindex;
 use App\Livewire\Orderlist;
 use App\Livewire\OrderManagementComponent;
 use App\Livewire\SingleProductComponent;
+use App\Livewire\ListOfCustomers;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -46,6 +47,7 @@ Route::middleware(['auth','verified','admin'])->group(function (){
 
     Route::get('/admins/orders', OrderManagementComponent::class)->name('admin.orders');
 
+    Route::get('/admins/customers', ListOfCustomers::class)->name('admin.customers');
 });
 
 require __DIR__.'/auth.php';

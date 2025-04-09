@@ -51,7 +51,7 @@
                                 <div class="card-body">
                                     <div class="d-sm-flex justify-content-between align-items-start">
                                         <div>
-                                            <h4 class="card-title card-title-dash">List of orders</h4>
+                                            <h4 class="card-title card-title-dash">List of users</h4>
 
                                         </div>
 

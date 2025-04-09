@@ -34,5 +34,6 @@ class Dashboardindex extends Component
         $users = User::all();
         return view('livewire.dashboard-index',compact('users'))->layout('dashboard');
     }
+    
 }
 

@@ -17,4 +17,5 @@
     <div class="d-flex align-items-center ms-auto">
         <a href="{{ route('products.browse') }}" class="btn btn-primary btn-sm me-2">Home</a> <!-- Home Button -->
     </div>
+    
 </nav>
