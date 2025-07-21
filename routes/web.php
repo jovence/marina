@@ -7,7 +7,7 @@ use App\Livewire\AddProductComponent;
 use App\Livewire\BrowseProductsComponent;
 use App\Livewire\CartComponent;
 use App\Livewire\CategoryComponent;
-use App\Livewire\Dashboardindex;
+use App\Livewire\DashboardIndex;
 use App\Livewire\Orderlist;
 use App\Livewire\OrderManagementComponent;
 use App\Livewire\SingleProductComponent;
@@ -38,8 +38,8 @@ Route::get('/order/list', Orderlist::class)->name('user.orders');
 // Route::get('/category/{id}', [CategoryController::class, 'index'])->name('category.show');
 //routes made availble only for admin users
 Route::middleware(['auth','verified','admin'])->group(function (){
-    Route::get('/dashboard',[AdminController::class,'index'])->name('dashboard');
-    Route::get('/dashboard',Dashboardindex::class)->name('dashboard');
+    // Route::get('/dashboard',[AdminController::class,'index'])->name('dashboard');
+    Route::get('/dashboard',DashboardIndex::class)->name('dashboard');
 
     Route::get('/admins/categories', CategoryComponent::class)->name('admin.categories');
 

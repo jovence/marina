@@ -8,7 +8,7 @@ use App\Models\Product;
 use App\Models\User;
 use Livewire\Component;
 
-class Dashboardindex extends Component
+class DashboardIndex extends Component
 {
     public $totalOrders;
     public $totalProducts;
